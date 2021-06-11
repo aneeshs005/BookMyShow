@@ -1,0 +1,13 @@
+<svg width="228.66" height="39.08" xmlns="http://www.w3.org/2000/svg">
+ <style>.cls-1{fill:#fed136;}</style>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" style="vector-effect: non-scaling-stroke;" id="svg_3" d="0" class="cls-1"/>
+  <text font-style="italic" font-weight="bold" stroke="null" transform="matrix(1,0,0,1.2709390539083498,21,13.770189573398756) " xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="24" id="svg_15" y="12.03182" x="18.5603" stroke-opacity="null" stroke-width="0" fill="#ff0000">Hello, Admin</text>
+ </g>
+</svg>
