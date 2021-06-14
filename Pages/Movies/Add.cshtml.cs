@@ -56,7 +56,7 @@ namespace BookMyShow.Pages
 
                 command.ExecuteNonQuery();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
 
             }
