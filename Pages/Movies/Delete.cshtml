@@ -1,4 +1,4 @@
-@page
+@page "/Movies/DeleteConfirm/{MovieID}"
 @{
     Layout = "_AdminLayout";
 }
@@ -8,7 +8,42 @@
 }
 
 <header class="masthead">
-    <div class="text-center">
-        <h1 class="display-4">Delete page</h1>
+    <div class="container">
+        <h1>Delete movie row</h1>
+        <div class="text-left">
+            <form class="form-horizontal" method="post">
+                <p>Do you want to delete the following movie?</p>
+
+                <div class="form-group">
+                    <label for="MovieName" class="col-sm-2 control-label">Movie Name:
+                        "@Model.MovieList[0].MovieName"</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="Year" class="col-sm-2 control-label">Release Year:"@Model.MovieList[0].Year"</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="Language" class="col-sm-2 control-label">Language:"@Model.MovieList[0].Language"</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="Genre" class="col-sm-2 control-label">Genre:"@Model.MovieList[0].Genre"</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="ActorName" class="col-sm-2 control-label">Actor
+                        Name:"@Model.MovieList[0].ActorName"</label>
+                </div>
+                <div class="form-inline">
+                    <div>
+                        <button type="submit" class="btn btn-warning">Yes</button>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <a class="btn btn-warning" href="../Edit" role="button">No</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </header>
