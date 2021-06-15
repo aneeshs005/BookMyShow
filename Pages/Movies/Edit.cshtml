@@ -8,7 +8,87 @@
 }
 
 <header class="masthead">
-    <div class="text-center">
-        <h1 class="display-4">Edit page</h1>
+    <div class="container">
+        <h1>Edit or delete Movies</h1>
+
+        <head>
+            <style>
+                table {
+                    width: 800px;
+                    border-collapse: collapse;
+                    overflow: hidden;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                }
+
+                th,
+                td {
+                    padding: 15px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    color: #fff;
+                }
+
+                th
+                {
+                    text-align: left;
+                }
+
+                thead {
+                    th {
+                        background-color: #55608f;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.3);
+                        }
+                    }
+
+                    td {
+                        position: relative;
+
+                        &:hover {
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: -9999px;
+                                bottom: -9999px;
+                                background-color: rgba(255, 255, 255, 0.2);
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+            <table>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Genre</th>
+                    <th>Language</th>
+                    <th>Release Year</th>
+                    <th>Actors</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                @for (int i = 0; i < Model.MovieList.Count; i++)
+                {
+                    <tr>
+                        <td>@Model.MovieList[i].MovieName</td>
+                        <td>@Model.MovieList[i].Genre</td>
+                        <td>@Model.MovieList[i].Language</td>
+                        <td>@Model.MovieList[i].Year</td>
+                        <td>@Model.MovieList[i].ActorName</td>
+                        <td><a href="~/Movies/EditConfirm/@Model.MovieList[i].MovieID">Edit</a></td>
+                        <td><a href="#">Delete</a></td>
+                    </tr>
+                }
+            </table>
+        </body>
     </div>
 </header>
