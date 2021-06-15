@@ -1,0 +1,54 @@
+@page "/Movies/EditConfirm/{MovieID}"
+@{
+    Layout = "_AdminLayout";
+}
+@model EditConfirmModel
+<header class="masthead">
+    <div class="container">
+        <h1>Make changes to the entries here</h1>
+        <div class="text-left">
+            <form class="form-horizontal" method="post">
+                <div class="form-group">
+                    <label for="MovieName" class="col-sm-2 control-label">Movie Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="MovieName" value="@Model.MovieList[0].MovieName"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Year" class="col-sm-2 control-label">Release Year</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="Year" value="@Model.MovieList[0].Year" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Language" class="col-sm-2 control-label">Language</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="Language" value="@Model.MovieList[0].Language"
+                            rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Genre" class="col-sm-2 control-label">Genre</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="Genre" value="@Model.MovieList[0].Genre" rows="5"
+                            required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ActorName" class="col-sm-2 control-label">Actor Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="ActorName" value="@Model.MovieList[0].ActorName"
+                            rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <button type="submit" class="btn btn-warning">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</header>
